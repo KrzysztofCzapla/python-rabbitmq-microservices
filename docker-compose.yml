@@ -1,10 +1,21 @@
 services:
-  backend:
-    container_name: backend
+  backend_receiver:
+    container_name: backend_receiver
     build:
       context: ./
       dockerfile: ./Dockerfile
-    command: python main.py
+    command: python app_receiver.py
+    volumes:
+      - .:/backend
+    ports:
+      - 5501:5501
+
+  backend_sender:
+    container_name: backend_sender
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    command: python app_sender.py
     volumes:
       - .:/backend
     ports:
