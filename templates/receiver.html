@@ -6,6 +6,14 @@
     <title>Receiver</title>
 </head>
 <body>
-    <h1>Receiver</h1>
+    <h1>Get last message</h1>
+    <form method="POST" action="/">
+        <input type="submit" value="Get">
+    </form>
+    {% if message %}
+    <h1>Last received message: {{message}}</h1>
+    {% else %}
+    <h1>No new message</h1>
+    {% endif %}
 </body>
 </html>

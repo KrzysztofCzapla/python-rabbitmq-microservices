@@ -6,6 +6,13 @@
     <title>Sender</title>
 </head>
 <body>
-    <h1>Sender</h1>
+    <h1>Send Message to the RabbitMQ</h1>
+    <form method="POST" action="/">
+        <input type="text" id="message" name="message" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if message %}
+    <h1>Last message send: {{message}}</h1>
+    {% endif %}
 </body>
 </html>
