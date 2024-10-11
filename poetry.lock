@@ -25,6 +25,7 @@ files = [
 [package.dependencies]
 colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
+
 [[package]]
 name = "colorama"
 version = "0.4.6"
